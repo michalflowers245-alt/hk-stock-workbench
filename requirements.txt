@@ -1,0 +1,3 @@
+cryptography>=44,<49
+pypdf>=5.4,<7
+websockets>=14,<17

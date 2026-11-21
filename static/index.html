@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111d29">
+  <title>港股工作台</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script type="module" src="/static/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#view">跳到内容</a>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#overview" aria-label="港股工作台总览">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>港股工作台<small>本地版 · 活动与收益记录</small></span>
+      </a>
+      <nav class="nav" aria-label="工作台导航">
+        <a href="#overview" data-route="overview"><span aria-hidden="true">◫</span>今日总览</a>
+        <a href="#market" data-route="market"><span aria-hidden="true">⌁</span>港股行情</a>
+        <a href="#ipo" data-route="ipo"><span aria-hidden="true">▤</span>打新日历</a>
+        <a href="#offers" data-route="offers"><span aria-hidden="true">◇</span>平台活动</a>
+        <a href="#operations" data-route="operations"><span aria-hidden="true">☑</span>任务与资金</a>
+        <a href="#ledger" data-route="ledger"><span aria-hidden="true">≋</span>收益台账</a>
+        <a href="#profiles" data-route="profiles"><span aria-hidden="true">◎</span>我的账户</a>
+        <a href="#settings" data-route="settings"><span aria-hidden="true">⚙</span>本地状态</a>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="status-dot" id="connection-dot" aria-hidden="true"></span>
+        <div><strong id="connection-label">正在连接工作台</strong><small>香港时间 UTC+8</small></div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-location"><span>个人工作台</span><span aria-hidden="true">/</span><strong id="breadcrumb">今日总览</strong></div>
+        <div class="topbar-actions">
+          <time id="clock" class="clock"></time>
+          <button type="button" class="button button-quiet" id="refresh-view" title="重新读取最新数据">刷新</button>
+        </div>
+      </header>
+      <main class="content" id="view" tabindex="-1" aria-busy="true">
+        <p class="empty-state">正在读取工作台…</p>
+      </main>
+    </div>
+  </div>
+  <dialog class="dialog" id="dialog" aria-labelledby="dialog-title"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
